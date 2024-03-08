@@ -50,7 +50,7 @@ public class Car {
         if (speed + ACCELERATION <= MAX_SPEED) {
             speed += ACCELERATION;
             // afficher détails
-            showDetails();
+            System.out.println(showDetails());
         } else {
             System.out.println("La vitesse maximale est atteinte.");
         }
@@ -58,11 +58,11 @@ public class Car {
 
     /**
      * Show the details of the car.
+     * @return Return the car's details
      */
-    private void showDetails() {
-        System.out.println("Modèle : " + model);
-        System.out.println("Couleur : " + color);
-        System.out.println("Vitesse actuelle : " + speed);
+    private String showDetails() {
+        String message = "Modèle : " + model + " Couleur : " + color + " Vitesse actuelle : " + speed;
+        return message;
     }
 
     /**
@@ -72,7 +72,7 @@ public class Car {
         if (speed - ACCELERATION >= 0) {
             speed -= ACCELERATION;
             // afficher détails
-            showDetails();
+            System.out.println(showDetails());
         } else {
             System.out.println("La voiture est déjà à l'arrêt.");
         }
