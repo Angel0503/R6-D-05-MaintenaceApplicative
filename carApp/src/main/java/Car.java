@@ -38,5 +38,31 @@ public class Car {
             System.out.println("La voiture est déjà à l'arrêt.");
         }
     }
+
+    public void start(Driver driver) {
+        if (driver.isAdult()) {
+            System.out.println(driver.getName() + " démarre la voiture.");
+        } else {
+            System.out.println("Le conducteur n'est pas assez âgé pour conduire.");
+        }
+    }
+
+    public void stop(Driver driver) {
+        System.out.println(driver.getName() + " arrête la voiture.");
+    }
+
+    public void changeSpeed(int newSpeed, Driver driver) {
+        System.out.println(driver.getName() + " change la vitesse de la voiture à " + newSpeed);
+        int vitesseActuelle;
+        if (getSpeed() >= newSpeed) {
+            while (getSpeed() > newSpeed) {
+                slowDown();
+            }
+        } else  {
+            while (getSpeed() < newSpeed) {
+                accelerate();
+            }
+        }
+    }
 }
 

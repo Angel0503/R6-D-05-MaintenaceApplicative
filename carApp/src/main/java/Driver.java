@@ -12,29 +12,6 @@ public class Driver {
         return age >= ADULTHOOD;
     }
 
-    public void startCar(Car car) {
-        if (isAdult()) {
-            System.out.println(name + " démarre la voiture.");
-        } else {
-            System.out.println("Le conducteur n'est pas assez âgé pour conduire.");
-        }
-    }
+    public String getName() { return this.name; }
 
-    public void stopCar(Car car) {
-        System.out.println(name + " arrête la voiture.");
-    }
-
-    public void changeSpeed(Car car, int newSpeed) {
-        System.out.println(name + " change la vitesse de la voiture à " + newSpeed);
-        int vitesseActuelle;
-        if (car.getSpeed() >= newSpeed) {
-            while (car.getSpeed() > newSpeed) {
-                car.slowDown();
-            }
-        } else  {
-            while (car.getSpeed() < newSpeed) {
-                car.accelerate();
-            }
-        }
-    }
 }
