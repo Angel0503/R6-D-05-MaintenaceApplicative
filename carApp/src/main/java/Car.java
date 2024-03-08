@@ -53,7 +53,6 @@ public class Car {
 
     public void changeSpeed(int newSpeed, Driver driver) {
         System.out.println(driver.getName() + " change la vitesse de la voiture à " + newSpeed);
-        int vitesseActuelle;
         if (getSpeed() >= newSpeed) {
             while (getSpeed() > newSpeed) {
                 slowDown();
