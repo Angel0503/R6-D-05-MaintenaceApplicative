@@ -60,7 +60,7 @@ public class Car {
      * Show the details of the car.
      * @return Return the car's details
      */
-    private String showDetails() {
+    public String showDetails() {
         String message = "Modèle : " + model + " Couleur : " + color + " Vitesse actuelle : " + speed;
         return message;
     }
